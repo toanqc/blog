@@ -1,0 +1,47 @@
+@media screen and (min-width: 890px) {
+	body {
+		width: 900px;
+		height: 100%;
+		background: #ddd;
+		color: #222;
+		font-family: 'Roboto Slab', georgia, serif;
+		font-size: 16px;
+		margin: 0 auto;
+	}
+}
+
+.container {
+	background: #fff;
+	
+}
+
+header {
+	height: 100px;
+	color: #ccc;
+}
+
+header ul.navigation {
+	float: right;
+	display: block;
+	margin-top: 35px;
+}
+
+header ul.navigation li {
+	display: inline-block; list-style : none;
+	margin-left: 10px;
+	list-style: none;
+}
+
+header ul.navigation li a {
+	color: #666;
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: none;
+	font-family: 'Roboto Condensed', 'Roboto';
+	text-transform: uppercase;
+	text-rendering: geometricPrecision;
+}
+
+header ul.navigation li a.active {
+	color: black;
+}
