@@ -1,18 +1,13 @@
 @media screen and (min-width: 890px) {
 	body {
 		width: 900px;
-		height: 100%;
 		background: #ddd;
 		color: #222;
 		font-family: 'Roboto Slab', georgia, serif;
 		font-size: 16px;
 		margin: 0 auto;
+		font-weight: 300;
 	}
-}
-
-.container {
-	background: #fff;
-	
 }
 
 header {
@@ -27,7 +22,8 @@ header ul.navigation {
 }
 
 header ul.navigation li {
-	display: inline-block; list-style : none;
+	display: inline-block;
+	list-style: none;
 	margin-left: 10px;
 	list-style: none;
 }
@@ -44,4 +40,106 @@ header ul.navigation li a {
 
 header ul.navigation li a.active {
 	color: black;
+}
+
+footer {
+	margin-top: 30px;
+	color: #666;
+	font-size: 14px;
+	text-align: center;
+	color: #666;
+	margin-bottom: 30px;
+}
+
+.container {
+	background: #fff;
+	/* very important... this makes the height auto, the height: auto DO NOT do the magic */
+	float: left;
+	min-height: 500px;
+	height: auto;
+	width: 100%;
+}
+
+.container .items {
+	position: relative;
+}
+
+.container .items a {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	width: 355px;
+	text-decoration: none;
+}
+
+.container .items a:hover {
+	color: black;
+	background-color: #9bfad0;
+	text-decoration: none;
+}
+
+.container .items a:nth-child(odd) {
+	padding-left: 60px;
+	padding-right: 20px;
+	float: left;
+}
+
+.container .items a:nth-child(even) {
+	padding-left: 40px;
+	padding-right: 50px;
+	float: right;
+}
+
+.container .items a span {
+	display: block;
+}
+
+.container .items a .title {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	color: #222;
+	text-transform: uppercase;
+}
+
+.container .items a .date {
+	color: #999;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.container .items a .content {
+	padding-top: 20px;
+	color: #222;
+	font-weight: 300;
+}
+
+.clearfix {
+	clear: both;
+}
+
+/* DETAIL PAGE */
+.container .detail-container {
+	margin: 80px;
+}
+
+.container .detail-container .detail-title {
+	font-size: 45px;
+}
+
+.container .detail-container .detail-date {
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-left: none;
+	border-right: none;
+	padding: 8px 0px 8px 50px;
+	margin: 30px 0px 40px -50px;
+	width: 100px;
+	color: #ccc;
+}
+
+.container .detail-container .detail-content img {
+	max-width: 100%;
+}
+
+.container .detail-container .detail-content .content-text {
+	margin-top: 30px;
 }
