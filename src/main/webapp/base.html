@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Toan Quach's Blog</title>
+
+<!-- font library -->
+
+
+<!-- css library -->
+<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+<!-- fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400'
+	rel='stylesheet' type='text/css'>
+<link href="assets/css/main.css" rel="stylesheet">
+
+<!-- css application -->
+<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+
+<!-- javascript library -->
+<script type="text/javascript" src="assets/js/lib/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="assets/js/lib/angular.min.js"></script>
+<script type="text/javascript"
+	src="assets/js/lib/angular-ui-router.min.js"></script>
+<script type="text/javascript"
+	src="assets/js/lib/angular-cookies.min.js"></script>
+<script type="text/javascript"
+	src="assets/js/lib/angular-messages.min.js"></script>
+<script type="text/javascript"
+	src="assets/js/lib/angular-animate.min.js"></script>
+
+<!-- javascript application -->
+<script type="text/javascript" src="assets/js/controller/app.js"></script>
+<script type="text/javascript" src="assets/js/controller/main.js"></script>
+
+</head>
+<body ng-app="blog">
+	<div ng-include="'partials/header.html'"></div>
+	<div class="container">
+		<div ui-view></div>
+	</div>
+	<div class="clearfix"></div>
+	<div ng-include="'partials/footer.html'"></div>
+</body>
+</html>

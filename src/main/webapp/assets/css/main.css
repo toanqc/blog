@@ -7,12 +7,27 @@
 		font-size: 16px;
 		margin: 0 auto;
 		font-weight: 300;
+		line-height: 1.6;
 	}
+}
+
+html {
+	overflow-y: scroll;
+}
+
+*:focus {
+	outline: none;
 }
 
 header {
 	height: 100px;
 	color: #ccc;
+}
+
+header .signature img {
+	margin-top: 20px; float : left;
+	height: 50px;
+	float: left;
 }
 
 header ul.navigation {
@@ -142,4 +157,136 @@ footer {
 
 .container .detail-container .detail-content .content-text {
 	margin-top: 30px;
+}
+
+/* ARCHIVE PAGE */
+.archive-container {
+	margin: 80px;
+}
+
+.archive-container input {
+	width: 70%;
+	border: 2px solid #ddd;
+	border-radius: 90px;
+	height: 30px;
+	padding: 3px;
+	padding-left: 15px;
+	font-size: inherit;
+}
+
+.archive-container input:focus {
+	border: 2px solid #29f;
+	border-radius: 90px;
+}
+
+.archive-container .archive-icon {
+	float: right;
+	margin-top: -15px;
+}
+
+.archive-container .archive-icon img {
+	width: 64px;
+	height: 64px;
+}
+
+.archive-container .archive-post {
+	margin-left: -20px;
+}
+
+.archive-container .archive-post ul {
+	display: block;
+	margin-top: 30px;
+}
+
+.archive-container .archive-post ul li {
+	margin-top: 10px;
+}
+
+.container a:link, a:active {
+	color: #29f;
+	text-decoration: none;
+}
+
+.container a:visited {
+	color: #7e5494;
+}
+
+.container a:hover {
+	text-decoration: underline;
+}
+
+/* ABOUT ME PAGE */
+.about-container {
+	margin: 80px;
+}
+
+.about-container .bio {
+	margin-top: 15px;
+	float: left;
+	width: 49%;
+	float: left;
+}
+
+.about-container .bio .main-bio {
+	font-style: italic;
+	font-weight: 500;
+}
+
+.about-container .bio .sub-bio {
+	margin-top: 15px;
+}
+
+.about-container .bio .quote-left {
+	float: left;
+	font-size: 50px;
+	margin-top: -20px;
+}
+
+.about-container .bio .quote-right {
+	font-size: 50px;
+	float: right;
+}
+
+.about-container .profile {
+	float: left;
+	text-align: right;
+	margin-left: 1%;
+	width: 50%;
+}
+
+.about-container .profile img {
+	width: 80%;
+}
+
+.about-container .elsewhere {
+	
+}
+
+.about-container .elsewhere ul {
+	display: block;
+	margin-left: -20px;
+}
+
+.about-container .facebook {
+	margin-top: 50px;
+	height: 50px;
+}
+
+.about-container .facebook div {
+	float: left;
+}
+
+.about-container .facebook img {
+	vertical-align: middle;
+	width: 30%;
+}
+
+.about-container .facebook .facebook-text {
+	margin-left: -35px;
+	margin-top: -5px;
+	font-size: 22px;
+}
+
+.about-container .facebook .facebook-text a {
+	color: #000;
 }
