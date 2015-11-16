@@ -24,6 +24,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	}).state('about-me', {
 		url : '/about-me',
 		templateUrl : 'about-me.html'
+	}).state('entry', {
+		url : '/admin/create-entry',
+		templateUrl : 'admin/entry.html'
+	}).state('entries', {
+		url : '/admin/entries',
+		templateUrl : 'admin/entry-list.html'
 	}).state('404', {
 		url : '/404',
 		templateUrl : 'errors/404.html'

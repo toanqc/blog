@@ -137,7 +137,7 @@ footer {
 	margin: 80px;
 }
 
-.container .detail-container .detail-title {
+.container .title {
 	font-size: 45px;
 }
 
@@ -289,4 +289,58 @@ footer {
 
 .about-container .facebook .facebook-text a {
 	color: #000;
+}
+
+/* ADMIN SECTION */
+/* ENTRY PAGE */
+.entry-container {
+	margin: 80px;
+}
+
+.entry-container table {
+	width: 100%;
+	font-size: 14px;
+	text-rendering: geometricPrecision;
+}
+
+.entry-container table label {
+	font-weight: 500;
+} 
+
+.entry-container table td {
+	padding: 10px;
+}
+
+.entry-container table textarea {
+	height: 100px;
+}
+
+.center {
+	text-align: center;
+}
+
+.entry-container table td .button {
+	width: 90px;
+	height: 25px;
+}
+
+.entry-container table td input {
+	height: 25px;
+	font-size: 14px;
+	width: 300px;
+	padding-left: 7px;
+	font-family: 'Roboto Slab', georgia, serif;
+}
+
+.entry-container table td input:focus {
+	border: 2px solid #29f;	
+}
+
+/* TinyMCE override */
+.mce-btn button {
+	font-size: 12px !important;
+}
+
+.mce-ico {
+	font-size: 14px !important;
 }
