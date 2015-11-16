@@ -11,4 +11,10 @@ public class BlogConstant {
 
 	/** Constant <code>DATE_FORMAT="MM/dd/yyyy"</code> */
 	public static final String DATE_FORMAT = "MM/dd/yyyy";
+
+	/**
+	 * Constant
+	 * <code>RANGE_LETTERS_VALIDATION="{range.letters.validation}"</code>
+	 */
+	public static final String RANGE_LETTERS_VALIDATION = "{range.letters.validation}";
 }
