@@ -1,5 +1,7 @@
 package mum.ea.blog.service;
 
+import java.util.List;
+
 import mum.ea.blog.domain.Entry;
 
 public interface EntryService {
@@ -10,4 +12,9 @@ public interface EntryService {
 	 */
 	public Entry addEntry(Entry entry);
 
+	/**
+	 * 
+	 * @return
+	 */
+	public List<Entry> getAllEntries();
 }

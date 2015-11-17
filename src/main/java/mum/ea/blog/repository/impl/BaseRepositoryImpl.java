@@ -6,9 +6,11 @@ import java.lang.reflect.Type;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import mum.ea.blog.repository.BaseRepository;
 
+@Transactional
 @SuppressWarnings({ "unchecked", "rawtypes" })
 public abstract class BaseRepositoryImpl<T> implements BaseRepository<T> {
 

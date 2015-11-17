@@ -21,6 +21,17 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+
+	<!-- Servlet Mapping: all goes to the central servlet calledD Dispatcher 
+		Servlet -->
+	<servlet-mapping>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<url-pattern>/v1/</url-pattern>
+	</servlet-mapping>
+
 	<!-- Application Context -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -29,6 +40,7 @@
 			/WEB-INF/config/security-context.xml
 		</param-value>
 	</context-param>
+
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
@@ -43,4 +55,3 @@
 	</filter-mapping>
 
 </web-app>
- 

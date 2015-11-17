@@ -25,7 +25,8 @@ header {
 }
 
 header .signature img {
-	margin-top: 20px; float : left;
+	margin-top: 20px;
+	float: left;
 	height: 50px;
 	float: left;
 }
@@ -297,34 +298,50 @@ footer {
 	margin: 80px;
 }
 
-.entry-container table, .login-container table {
+.container table {
 	width: 100%;
 	font-size: 14px;
 	text-rendering: geometricPrecision;
 }
 
-.entry-container table label, .login-container table label {
+.container table label {
 	font-weight: 500;
-} 
+}
 
-.entry-container table td, .login-container table td {
+.container table td {
 	padding: 5px 0px 5px 0px;
 }
 
-.entry-container table textarea {
+.container table textarea {
 	height: 100px;
+}
+
+.entry-list-container tr:nth-child(even) {
+	background: #e6e6e6;
+}
+
+.entry-list-container table {
+	border-collapse: collapse;
+}
+
+.entry-list-container table td:first-child {
+	padding-left: 7px;
 }
 
 .center {
 	text-align: center;
 }
 
-.entry-container table td .button, .login-container table td .button {
+.left {
+	text-align: left;
+}
+
+.container table td .button {
 	width: 90px;
 	height: 25px;
 }
 
-.entry-container table td input, .login-container table td input {
+.container table td input {
 	height: 25px;
 	font-size: 14px;
 	width: 300px;
@@ -332,8 +349,8 @@ footer {
 	font-family: 'Roboto Slab', georgia, serif;
 }
 
-.entry-container table td input:focus, .login-container table td input:focus {
-	border: 2px solid #29f;	
+.container table td input:focus {
+	border: 2px solid #29f;
 }
 
 /* TinyMCE override */
@@ -352,4 +369,9 @@ footer {
 
 .error {
 	color: red;
+}
+
+/* ENTRY LIST PAGE */
+.entry-list-container {
+	margin: 80px;
 }

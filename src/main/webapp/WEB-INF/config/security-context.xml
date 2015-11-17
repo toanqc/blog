@@ -36,7 +36,7 @@
 		<!-- Comment out login-page through logoinfailed for BASIC -->
 		<security:form-login login-page="/login"
 			username-parameter="username" password-parameter="password"
-			authentication-failure-url="/login/failed" default-target-url="/entries"
+			authentication-failure-url="/login/failed" default-target-url="/admin/entries"
 			always-use-default-target="true" />
 
 		<!-- BY DEFAULT the URL /j_spring_security_logout triggers logout NOTE: 

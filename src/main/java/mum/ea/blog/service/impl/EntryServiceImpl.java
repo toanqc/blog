@@ -1,5 +1,7 @@
 package mum.ea.blog.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,5 +20,10 @@ public class EntryServiceImpl implements EntryService {
 	@Override
 	public Entry addEntry(Entry entry) {
 		return entryRepository.add(entry);
+	}
+
+	@Override
+	public List<Entry> getAllEntries() {
+		return entryRepository.getAll();
 	}
 }

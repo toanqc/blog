@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <div class="detail-container">
 	<div class="title">Gotalk</div>
 	<div class="detail-date">Jan 21, 2015</div>

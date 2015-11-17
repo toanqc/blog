@@ -38,7 +38,7 @@ public class Entry implements Serializable {
 	private String title;
 
 	@NotBlank(message = BlogConstant.EMPTY_VALIDATION)
-	@Column(name = "SHORT_DESCRIPTION", nullable = false, length = 255)
+	@Column(name = "SHORT_DESCRIPTION", nullable = false, length = 300)
 	private String shortDescription;
 
 	@NotBlank(message = BlogConstant.EMPTY_VALIDATION)
