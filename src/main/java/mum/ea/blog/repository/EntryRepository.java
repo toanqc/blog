@@ -11,5 +11,18 @@ import mum.ea.blog.domain.Entry;
  */
 public interface EntryRepository extends BaseRepository<Entry> {
 
+	/**
+	 * 
+	 * @return
+	 */
 	public List<Entry> getAll();
+
+	/**
+	 * 
+	 * @param id
+	 * @param title
+	 * @param content
+	 * @return
+	 */
+	public Entry patchEntry(long id, String title, String shortDescription, String content);
 }

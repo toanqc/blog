@@ -17,6 +17,7 @@ public class EntryController {
 
 	@RequestMapping(value = "/archives", method = RequestMethod.GET)
 	public String getArchives(Model model) {
+		model.addAttribute("entries", entryService.getAllEntries());
 		return "archive";
 	}
 

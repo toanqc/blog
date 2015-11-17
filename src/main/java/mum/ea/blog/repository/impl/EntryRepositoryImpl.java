@@ -19,4 +19,15 @@ public class EntryRepositoryImpl extends BaseRepositoryImpl<Entry> implements En
 		Query query = sessionFactory.getCurrentSession().createQuery("from Entry");
 		return new ArrayList<Entry>(query.list());
 	}
+
+	@Override
+	public Entry patchEntry(long id, String title, String shortDescription, String content) {
+		Entry entry = this.load(id);
+
+		entry.setTitle(title);
+		entry.setShortDescription(shortDescription);
+		entry.setContent(content);
+
+		return this.update(entry);
+	}
 }

@@ -1,8 +1,6 @@
 package mum.ea.blog.domain;
 
 import java.io.Serializable;
-import java.text.ParseException;
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Basic;
@@ -14,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-import javax.persistence.PrePersist;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -61,11 +58,6 @@ public class Entry implements Serializable {
 		this.title = title;
 		this.shortDescription = shortDescription;
 		this.content = content;
-	}
-
-	@PrePersist
-	public void updatDate() throws ParseException {
-		createdDate = Calendar.getInstance().getTime();
 	}
 
 	/**

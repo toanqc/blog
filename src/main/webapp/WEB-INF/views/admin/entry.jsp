@@ -44,8 +44,14 @@
 			<spring:message code="label.entry.edit" />
 		</c:if>
 	</div>
+
 	<div>
-		<spring:url value="/admin/entries" var="entryUrl" />
+		<c:if test="${isUpdate eq false}">
+			<spring:url value="/admin/entries" var="entryUrl" />
+		</c:if>
+		<c:if test="${isUpdate eq true}">
+			<spring:url value="/admin/entries/${entry.id}" var="entryUrl" />
+		</c:if>
 		<form:form modelAttribute="entry" action="${entryUrl}" method="post">
 			<table>
 				<tr>

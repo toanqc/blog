@@ -35,6 +35,15 @@ public interface EntryService {
 	/**
 	 * 
 	 * @param id
+	 * @param title
+	 * @param content
+	 * @return
+	 */
+	public Entry patchEntry(long id, String title, String content);
+
+	/**
+	 * 
+	 * @param id
 	 * @return
 	 */
 	public boolean deleteEntry(long id);

@@ -1,5 +1,7 @@
 package mum.ea.blog.controller;
 
+import java.security.Principal;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import mum.ea.blog.domain.Entry;
 import mum.ea.blog.service.EntryService;
+import mum.ea.blog.service.UserService;
 
 @Controller
 @RequestMapping("/admin")
@@ -20,6 +23,9 @@ public class AdminController {
 
 	@Autowired
 	private EntryService entryService;
+
+	@Autowired
+	private UserService userService;
 
 	@RequestMapping(value = "/entries/create", method = RequestMethod.GET)
 	public String getEntryPage(@ModelAttribute Entry entry, Model model) {
@@ -41,8 +47,8 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "/entries/{id}", method = RequestMethod.POST)
-	public String updateEntry(@Valid @ModelAttribute Entry entry, BindingResult bindingResult, @PathVariable long id) {
-		entryService.updateEntry(entry);
+	public String patchEntry(@Valid @ModelAttribute Entry entry, BindingResult bindingResult, @PathVariable long id) {
+		entryService.patchEntry(id, entry.getTitle(), entry.getContent());
 		return "redirect:/admin/entries";
 	}
 
@@ -53,15 +59,12 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "/entries", method = RequestMethod.POST)
-	public String addEntry(@Valid @ModelAttribute Entry entry, BindingResult bindingResult) {
+	public String addEntry(@Valid @ModelAttribute Entry entry, BindingResult bindingResult, Principal principal) {
 		if (bindingResult.hasErrors()) {
 			return "entry";
 		}
 
-		if (entry.getContent().length() > 400) {
-			entry.setShortDescription(entry.getContent().substring(0, 400));
-		}
-
+		entry.setUser(userService.getByUsername(principal.getName()));
 		entryService.addEntry(entry);
 		return "redirect:/admin/entries";
 	}
