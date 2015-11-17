@@ -4,6 +4,10 @@
 		<a href="<spring:url value="/" />"><img
 			src="<spring:url value="/assets/img/signature.png" />" /></a>
 	</div>
+	<div class="i18n">
+		<a href="?language=en_US"><img src="<spring:url value="/assets/img/flag/us.png" />" /></a>
+		<a href="?language=vi_VN"><img src="<spring:url value="/assets/img/flag/vi.png" />" /></a>
+	</div>
 	<ul class="navigation">
 		<li><a target="_blank"
 			href="http://www.flickr.com/photos/toanquach"><spring:message code="label.header.photography" /></a></li>

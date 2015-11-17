@@ -8,22 +8,28 @@
 			<table>
 				<c:if test="${error eq true}">
 					<tr>
-						<td colspan="2" class="error">Incorrect username or password.
-							Please try again!</td>
+						<td colspan="2" class="error"><spring:message
+								code="label.login.failed" /></td>
 					</tr>
 				</c:if>
 				<tr>
-					<td width="100px"><label for="username">Username *</label></td>
+					<td width="100px"><label for="username"><spring:message
+								code="label.login.username" /></label></td>
 					<td><input type="text" id="username" name="username"></td>
 				</tr>
 				<tr>
-					<td><label for="password">Password *</label></td>
+					<td><label for="password"><spring:message
+								code="label.login.password" /> *</label></td>
 					<td><input type="password" id="password" name="password"></td>
 				</tr>
 				<tr>
 					<td colspan="2" class="center">
-						<button type="submit" class="button">Login</button>
-						<button type="reset" class="button">Cancel</button>
+						<button type="submit" class="button">
+							<spring:message code="label.login" />
+						</button>
+						<button type="reset" class="button">
+							<spring:message code="label.clear" />
+						</button>
 					</td>
 				</tr>
 			</table>

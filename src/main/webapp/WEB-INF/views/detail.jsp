@@ -7,11 +7,6 @@
 		<fmt:formatDate pattern="MMM dd, yyyy" value="${entry.createdDate}" />
 	</div>
 	<div class="detail-content">
-		<!-- 
-		<div class="content-img">
-			<img src="<spring:url value="/assets/img/gotalk.png" />" />
-		</div>
-		 -->
 		<div class="content-text">
 			${entry.entryDetail.content}
 		</div>
