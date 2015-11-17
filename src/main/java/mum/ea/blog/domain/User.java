@@ -52,7 +52,7 @@ public class User implements Serializable {
 
 	@Valid
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "EMAIL", referencedColumnName = "EMAIL")
+	@JoinColumn(name = "USERNAME", referencedColumnName = "USERNAME")
 	private List<Authority> authorities;
 
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
