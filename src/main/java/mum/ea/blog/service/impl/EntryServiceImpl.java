@@ -3,6 +3,7 @@ package mum.ea.blog.service.impl;
 import java.util.Calendar;
 import java.util.List;
 
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,7 +23,7 @@ public class EntryServiceImpl implements EntryService {
 	@Override
 	public Entry addEntry(Entry entry) {
 		// trim content down to 300 character then make it a short description
-		String shortDescription = BlogUtil.trimContent(entry.getContent());
+		String shortDescription = BlogUtil.trimContent(entry.getEntryDetail().getContent());
 		// set short description
 		entry.setShortDescription(shortDescription);
 		// set current date for created date
@@ -38,7 +39,10 @@ public class EntryServiceImpl implements EntryService {
 
 	@Override
 	public Entry getEntry(long id) {
-		return entryRepository.get(id);
+		Entry entry = entryRepository.get(id);
+		Hibernate.initialize(entry.getEntryDetail());
+
+		return entry;
 	}
 
 	@Override
@@ -56,5 +60,10 @@ public class EntryServiceImpl implements EntryService {
 		// trim content down to 300 character then make it a short description
 		String shortDescription = BlogUtil.trimContent(content);
 		return entryRepository.patchEntry(id, title, shortDescription, content);
+	}
+
+	@Override
+	public List<Entry> searchEntry(String title) {
+		return entryRepository.searchEntry(title);
 	}
 }

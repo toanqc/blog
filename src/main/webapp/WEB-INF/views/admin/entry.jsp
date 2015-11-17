@@ -60,7 +60,7 @@
 					<td><form:input path="title" type="text" id="title" /></td>
 				</tr>
 				<tr>
-					<td colspan="2"><form:textarea path="content" id="content" /></td>
+					<td colspan="2"><form:textarea path="entryDetail.content" id="content" /></td>
 				</tr>
 				<tr>
 					<td colspan="2" class="center"><button type="submit"

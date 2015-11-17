@@ -47,4 +47,11 @@ public interface EntryService {
 	 * @return
 	 */
 	public boolean deleteEntry(long id);
+
+	/**
+	 * 
+	 * @param title
+	 * @return
+	 */
+	public List<Entry> searchEntry(String title);
 }

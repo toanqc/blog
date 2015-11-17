@@ -12,9 +12,9 @@ import mum.ea.blog.repository.EntryRepository;
 
 @Transactional
 @Repository
+@SuppressWarnings("unchecked")
 public class EntryRepositoryImpl extends BaseRepositoryImpl<Entry> implements EntryRepository {
 
-	@SuppressWarnings("unchecked")
 	public List<Entry> getAll() {
 		Query query = sessionFactory.getCurrentSession().createQuery("from Entry");
 		return new ArrayList<Entry>(query.list());
@@ -26,8 +26,15 @@ public class EntryRepositoryImpl extends BaseRepositoryImpl<Entry> implements En
 
 		entry.setTitle(title);
 		entry.setShortDescription(shortDescription);
-		entry.setContent(content);
+		entry.getEntryDetail().setContent(content);
 
 		return this.update(entry);
+	}
+
+	@Override
+	public List<Entry> searchEntry(String title) {
+		Query query = sessionFactory.getCurrentSession().createQuery("from Entry e where e.title like :title");
+		query.setString("title", "%" + title + "%");
+		return new ArrayList<Entry>(query.list());
 	}
 }

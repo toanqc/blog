@@ -32,10 +32,6 @@
 <script type="text/javascript"
 	src="<spring:url value="/assets/js/lib/tinymce/tinymce.min.js" />"></script>
 
-<!-- javascript application -->
-<script type="text/javascript"
-	src="<spring:url value="/assets/js/app.js" />"></script>
-
 </head>
 <body>
 	<tiles:insertAttribute name="header" />

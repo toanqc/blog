@@ -25,4 +25,11 @@ public interface EntryRepository extends BaseRepository<Entry> {
 	 * @return
 	 */
 	public Entry patchEntry(long id, String title, String shortDescription, String content);
+
+	/**
+	 * 
+	 * @param title
+	 * @return
+	 */
+	public List<Entry> searchEntry(String title);
 }

@@ -48,7 +48,7 @@ public class AdminController {
 
 	@RequestMapping(value = "/entries/{id}", method = RequestMethod.POST)
 	public String patchEntry(@Valid @ModelAttribute Entry entry, BindingResult bindingResult, @PathVariable long id) {
-		entryService.patchEntry(id, entry.getTitle(), entry.getContent());
+		entryService.patchEntry(id, entry.getTitle(), entry.getEntryDetail().getContent());
 		return "redirect:/admin/entries";
 	}
 

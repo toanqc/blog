@@ -13,7 +13,7 @@
 		</div>
 		 -->
 		<div class="content-text">
-			${entry.content}
+			${entry.entryDetail.content}
 		</div>
 	</div>
 </div>
