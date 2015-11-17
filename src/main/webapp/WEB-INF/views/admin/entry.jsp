@@ -1,8 +1,10 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <script>
 	tinymce
 			.init({
 				selector : '#content',
-				content_css : "assets/css/content.css",
+				content_css : "../../assets/css/content.css",
 				theme : "modern",
 				height : 350,
 				plugins : [

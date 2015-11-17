@@ -1,11 +1,12 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
 <div class="about-container">
 	<div class="bio">
 		<div class="main-bio">
 			Hello. My name is Toan Quach, you can call me Tee. I'm a Full Stack
 			Java Developer living in <a target="_blank"
-				href="http://www.google.com/maps/place/Seattle,+WA/@47.6147624,-122.4763309,11z/data=!3m1!4b1!4m2!3m1!1s0x5490102c93e83355:0x102565466944d59a">Seattle,
-				WA</a>. I have 10 years experience with 1.5 years working in the United
-			States.
+				href="http://www.google.com/maps/place/Seattle,+WA/@47.6147624,-122.4763309,11z/data=!3m1!4b1!4m2!3m1!1s0x5490102c93e83355:0x102565466944d59a">Fairfield,
+				IA right now</a>. I have 10 years experience with 1.5 years working in
+			the United States.
 		</div>
 		<div class="sub-bio">
 			I'm familiar with most of web technologies using Java. I can work as
@@ -17,14 +18,14 @@
 
 	</div>
 	<div class="profile">
-		<img src="assets/img/profile.jpg" />
+		<img src="<spring:url value="/assets/img/profile.jpg" />" />
 	</div>
 	<div class="clearfix"></div>
 
 	<div class="elsewhere">
 		<h2>Follow me on</h2>
 		<div>You can find me on a variety of world wide interweb sites
-			with username “toanqc”.</div>
+			with username “toanqc”.</div>
 		<ul>
 			<li><a target="_blank" href="http://www.facebook.com/toanqc">Facebook</a>
 				— friends, status updates</li>
@@ -33,7 +34,7 @@
 			<li><a target="_blank" href="http://www.github.com/toanqc">Github</a>
 				— code and code stuff</li>
 			<li><a target="_blank"
-				href="http://www.linkedin.com/in/toanquach">LinkedIn</a> —
+				href="http://www.linkedin.com/in/toanquach">LinkedIn</a> —
 				Professional profile &amp; experience</li>
 			<li><a target="_blank"
 				href="http://www.flickr.com/photos/toanquach">Flickr</a> —
@@ -45,7 +46,7 @@
 
 	<div class="facebook">
 		<div>
-			<img src="assets/img/facebook.png">
+			<img src="/assets/img/facebook.png">
 		</div>
 		<div class="facebook-text">
 			<a target="_blank" href="http://www.facebook.com/toanqc">@toanqc</a>

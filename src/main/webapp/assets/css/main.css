@@ -297,18 +297,18 @@ footer {
 	margin: 80px;
 }
 
-.entry-container table {
+.entry-container table, .login-container table {
 	width: 100%;
 	font-size: 14px;
 	text-rendering: geometricPrecision;
 }
 
-.entry-container table label {
+.entry-container table label, .login-container table label {
 	font-weight: 500;
 } 
 
-.entry-container table td {
-	padding: 10px;
+.entry-container table td, .login-container table td {
+	padding: 5px 0px 5px 0px;
 }
 
 .entry-container table textarea {
@@ -319,12 +319,12 @@ footer {
 	text-align: center;
 }
 
-.entry-container table td .button {
+.entry-container table td .button, .login-container table td .button {
 	width: 90px;
 	height: 25px;
 }
 
-.entry-container table td input {
+.entry-container table td input, .login-container table td input {
 	height: 25px;
 	font-size: 14px;
 	width: 300px;
@@ -332,7 +332,7 @@ footer {
 	font-family: 'Roboto Slab', georgia, serif;
 }
 
-.entry-container table td input:focus {
+.entry-container table td input:focus, .login-container table td input:focus {
 	border: 2px solid #29f;	
 }
 
@@ -343,4 +343,13 @@ footer {
 
 .mce-ico {
 	font-size: 14px !important;
+}
+
+/* LOGIN PAGE */
+.login-container {
+	margin: 80px;
+}
+
+.error {
+	color: red;
 }

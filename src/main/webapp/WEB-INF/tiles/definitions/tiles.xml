@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="base" template="/WEB-INF/tiles/templates/base.jsp">
+		<put-attribute name="title" value="Toan Quach's Blog" />
+		<put-attribute name="header"
+			value="/WEB-INF/tiles/templates/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/tiles/templates/footer.jsp" />
+	</definition>
+
+	<definition name="home" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+	</definition>
+	<definition name="archive" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/archive.jsp" />
+	</definition>
+	<definition name="about-me" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/about-me.jsp" />
+	</definition>
+	<definition name="detail" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/detail.jsp" />
+	</definition>
+
+	<!-- Login -->
+	<definition name="login" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+
+	<!-- Admin -->
+	<definition name="entry" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/admin/entry.jsp" />
+	</definition>
+	<definition name="entry-list" extends="base">
+		<put-attribute name="body"
+			value="/WEB-INF/views/admin/entry-list.jsp" />
+	</definition>
+
+	<!-- Error -->
+	<definition name="404" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/error/404.jsp" />
+	</definition>
+	<definition name="403" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/error/403.jsp" />
+	</definition>
+
+</tiles-definitions>

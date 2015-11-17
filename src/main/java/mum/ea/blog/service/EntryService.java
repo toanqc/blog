@@ -1,9 +1,13 @@
 package mum.ea.blog.service;
 
-public class EntryService {
+import mum.ea.blog.domain.Entry;
 
-	public EntryService() {
-		// TODO Auto-generated constructor stub
-	}
+public interface EntryService {
+
+	/**
+	 * 
+	 * @return
+	 */
+	public Entry addEntry(Entry entry);
 
 }
