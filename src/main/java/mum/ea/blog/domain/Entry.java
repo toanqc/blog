@@ -15,9 +15,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.hibernate.validator.constraints.NotBlank;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import mum.ea.blog.util.BlogConstant;
 
@@ -44,7 +45,7 @@ public class Entry implements Serializable {
 	@Column(name = "CONTENT", nullable = false)
 	private String content;
 
-	@DateTimeFormat(pattern = BlogConstant.DATE_FORMAT)
+	@Temporal(TemporalType.DATE)
 	@Column(name = "CREATED_DATE", nullable = false)
 	private Date createdDate;
 

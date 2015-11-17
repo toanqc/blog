@@ -1,7 +1,16 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 
 <div class="items">
+	<c:forEach items="${entries}" var="entry">
+		<a href="<spring:url value="/entries/${entry.id}" />"> <span
+			class="title">${entry.title}</span> <span class="date"><fmt:formatDate
+					pattern="MMM dd yyyy" value="${entry.createdDate}" /></span> <span
+			class="content">${entry.shortDescription}</span>
+		</a>
+	</c:forEach>
 	<a href="detail"> <span class="title">GOTALK</span> <span
 		class="date">Jan 2015</span> <span class="content">Gotalk
 			exists to make it easy for programs to talk with one another over the
@@ -12,11 +21,11 @@
 		class="content">Your favourite fancy-pants modern programming
 			language is from the 1950s. Pretty much any programming language used
 			today is a derivative of Fortran or Lisp, both born in the 1950s.
-			Okay, reality check: It's 2013 — yes, 60 years later—and we have
-			cars that drive themselves on the street, robots roaming the surface
-			of alien planets and tiny networked devices with interactive surfaces
-			that we keep in our pockets, which are orders of magnitude more
-			powerful than the computers of the 1950s.</span>
+			Okay, reality check: It's 2013 — yes, 60 years later—and we
+			have cars that drive themselves on the street, robots roaming the
+			surface of alien planets and tiny networked devices with interactive
+			surfaces that we keep in our pockets, which are orders of magnitude
+			more powerful than the computers of the 1950s.</span>
 	</a> <a href=""> <span class="title">Hello, Dropbox</span> <span
 		class="date">Jan 2015</span> <span class="content">I'm very
 			excited to let you know that I'am joining Dropbox. After two years
