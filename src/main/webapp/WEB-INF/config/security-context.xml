@@ -38,6 +38,8 @@
 			username-parameter="username" password-parameter="password"
 			authentication-failure-url="/login/failed" default-target-url="/admin/entries"
 			always-use-default-target="true" />
+		<security:logout logout-success-url="/"
+			logout-url="/j_spring_security_logout" />
 
 		<!-- BY DEFAULT the URL /j_spring_security_logout triggers logout NOTE: 
 			is it JUST a URL naming convention - no mapping is required logout-url= "/doLogout" 

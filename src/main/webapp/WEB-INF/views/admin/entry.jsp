@@ -1,6 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="security"
+	uri="http://www.springframework.org/security/tags"%>
 
 <script>
 	tinymce
@@ -18,24 +21,49 @@
 			});
 </script>
 
+<div class="sub-header">
+	<div class="breadcrumb">
+		<a href="<spring:url value="/admin/entries" />"><spring:message
+				code="label.back" /></a>
+	</div>
+	<div class="welcome">
+		<security:authorize access="isAuthenticated()">
+			<spring:message code="label.welcome" />
+			<security:authentication property="principal.username" />,
+			<a href="<spring:url value="/j_spring_security_logout" />"><spring:message
+					code="label.logout" /></a>
+		</security:authorize>
+	</div>
+</div>
 <div class="entry-container">
-	<div class="title">Create new entry</div>
+	<div class="title">
+		<c:if test="${isUpdate eq false}">
+			<spring:message code="label.entry.create.new" />
+		</c:if>
+		<c:if test="${isUpdate eq true}">
+			<spring:message code="label.entry.edit" />
+		</c:if>
+	</div>
 	<div>
-		<spring:url value="/admin/entries/${id}" var="entryUrl" />
+		<spring:url value="/admin/entries" var="entryUrl" />
 		<form:form modelAttribute="entry" action="${entryUrl}" method="post">
 			<table>
 				<tr>
-					<td width="50px"><label>Title *</label></td>
+					<td width="50px"><label><spring:message
+								code="label.entry.title" /> *</label></td>
 					<td><form:input path="title" type="text" id="title" /></td>
 				</tr>
 				<tr>
-					<td colspan="2"><form:textarea path="content" /></td>
+					<td colspan="2"><form:textarea path="content" id="content" /></td>
 				</tr>
 				<tr>
-					<td colspan="2" class="center">
-						<button class="button">Post</button>
-						<button class="button">Cancel</button>
-					</td>
+					<td colspan="2" class="center"><button type="submit"
+							class="button">
+							<spring:message code="label.post" />
+						</button>
+						<button type="reset" class="button">
+							<spring:message code="label.cancel" />
+						</button></td>
 				</tr>
 			</table>
 		</form:form>

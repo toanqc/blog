@@ -15,7 +15,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -36,7 +35,6 @@ public class Entry implements Serializable {
 	@Column(name = "TITLE", nullable = false, length = 100)
 	private String title;
 
-	@NotBlank(message = BlogConstant.EMPTY_VALIDATION)
 	@Column(name = "SHORT_DESCRIPTION", nullable = false, length = 300)
 	private String shortDescription;
 
@@ -46,7 +44,6 @@ public class Entry implements Serializable {
 	@Column(name = "CONTENT", nullable = false)
 	private String content;
 
-	@NotNull(message = BlogConstant.EMPTY_VALIDATION)
 	@DateTimeFormat(pattern = BlogConstant.DATE_FORMAT)
 	@Column(name = "CREATED_DATE", nullable = false)
 	private Date createdDate;
@@ -71,17 +68,18 @@ public class Entry implements Serializable {
 	}
 
 	/**
-	 * @return the id
-	 */
-	public long getId() {
-		return id;
-	}
-
-	/**
 	 * @return the title
 	 */
 	public String getTitle() {
 		return title;
+	}
+
+	/**
+	 * @param title
+	 *            the title to set
+	 */
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	/**
@@ -92,6 +90,14 @@ public class Entry implements Serializable {
 	}
 
 	/**
+	 * @param shortDescription
+	 *            the shortDescription to set
+	 */
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
+	}
+
+	/**
 	 * @return the content
 	 */
 	public String getContent() {
@@ -99,9 +105,47 @@ public class Entry implements Serializable {
 	}
 
 	/**
+	 * @param content
+	 *            the content to set
+	 */
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	/**
 	 * @return the createdDate
 	 */
 	public Date getCreatedDate() {
 		return createdDate;
+	}
+
+	/**
+	 * @param createdDate
+	 *            the createdDate to set
+	 */
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	/**
+	 * @return the user
+	 */
+	public User getUser() {
+		return user;
+	}
+
+	/**
+	 * @param user
+	 *            the user to set
+	 */
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public long getId() {
+		return id;
 	}
 }

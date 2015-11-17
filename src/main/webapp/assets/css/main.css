@@ -336,6 +336,10 @@ footer {
 	text-align: left;
 }
 
+.right {
+	text-align: right;
+}
+
 .container table td .button {
 	width: 90px;
 	height: 25px;
@@ -374,4 +378,18 @@ footer {
 /* ENTRY LIST PAGE */
 .entry-list-container {
 	margin: 80px;
+}
+
+/* SUB-HEADER */
+.sub-header {
+	padding: 20px;
+}
+
+.sub-header .breadcrumb {
+	float: left;
+}
+
+.sub-header .welcome {
+	text-align: center;
+	float: right;
 }

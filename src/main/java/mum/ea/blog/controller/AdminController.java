@@ -22,7 +22,8 @@ public class AdminController {
 	private EntryService entryService;
 
 	@RequestMapping(value = "/entries/create", method = RequestMethod.GET)
-	public String getEntryPage() {
+	public String getEntryPage(@ModelAttribute Entry entry, Model model) {
+		model.addAttribute("isUpdate", false);
 		return "entry";
 	}
 
@@ -35,11 +36,12 @@ public class AdminController {
 	@RequestMapping(value = "/entries/{id}", method = RequestMethod.GET)
 	public String getEntry(@PathVariable long id, Model model) {
 		model.addAttribute("entry", entryService.getEntry(id));
+		model.addAttribute("isUpdate", true);
 		return "entry";
 	}
 
 	@RequestMapping(value = "/entries/{id}", method = RequestMethod.POST)
-	public String updateEntry(@PathVariable long id, @ModelAttribute Entry entry) {
+	public String updateEntry(@Valid @ModelAttribute Entry entry, BindingResult bindingResult, @PathVariable long id) {
 		entryService.updateEntry(entry);
 		return "redirect:/admin/entries";
 	}
@@ -54,6 +56,10 @@ public class AdminController {
 	public String addEntry(@Valid @ModelAttribute Entry entry, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			return "entry";
+		}
+
+		if (entry.getContent().length() > 400) {
+			entry.setShortDescription(entry.getContent().substring(0, 400));
 		}
 
 		entryService.addEntry(entry);
