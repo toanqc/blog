@@ -6,7 +6,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -52,8 +51,8 @@ public class Entry implements Serializable {
 	@Column(name = "CREATED_DATE", nullable = false)
 	private Date createdDate;
 
-	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, targetEntity = User.class)
-	@JoinColumn(name = "USER_ID")
+	@ManyToOne(fetch = FetchType.EAGER, targetEntity = User.class)
+	@JoinColumn(name = "USER_ID", insertable = false, updatable = false)
 	private User user;
 
 	public Entry() {

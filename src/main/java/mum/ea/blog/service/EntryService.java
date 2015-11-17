@@ -17,4 +17,25 @@ public interface EntryService {
 	 * @return
 	 */
 	public List<Entry> getAllEntries();
+
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public Entry getEntry(long id);
+
+	/**
+	 * 
+	 * @param entry
+	 * @return
+	 */
+	public Entry updateEntry(Entry entry);
+
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public boolean deleteEntry(long id);
 }

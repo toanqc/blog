@@ -55,7 +55,7 @@ public class User implements Serializable {
 	@JoinColumn(name = "USERNAME", referencedColumnName = "USERNAME")
 	private List<Authority> authorities;
 
-	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@OneToMany(fetch = FetchType.EAGER)
 	@JoinColumn(name = "USER_ID")
 	private List<Entry> entries;
 

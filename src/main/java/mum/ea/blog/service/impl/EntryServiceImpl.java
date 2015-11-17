@@ -26,4 +26,19 @@ public class EntryServiceImpl implements EntryService {
 	public List<Entry> getAllEntries() {
 		return entryRepository.getAll();
 	}
+
+	@Override
+	public Entry getEntry(long id) {
+		return entryRepository.get(id);
+	}
+
+	@Override
+	public Entry updateEntry(Entry entry) {
+		return entryRepository.update(entry);
+	}
+
+	@Override
+	public boolean deleteEntry(long id) {
+		return entryRepository.delete(id);
+	}
 }

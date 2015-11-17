@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <script>
 	tinymce
 			.init({
@@ -19,20 +21,23 @@
 <div class="entry-container">
 	<div class="title">Create new entry</div>
 	<div>
-		<table>
-			<tr>
-				<td width="50px"><label>Title *</label></td>
-				<td><input type="text" id="title"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><textarea id="content"></textarea></td>
-			</tr>
-			<tr>
-				<td colspan="2" class="center">
-					<button class="button">Post</button>
-					<button class="button">Cancel</button>
-				</td>
-			</tr>
-		</table>
+		<spring:url value="/admin/entries/${id}" var="entryUrl" />
+		<form:form modelAttribute="entry" action="${entryUrl}" method="post">
+			<table>
+				<tr>
+					<td width="50px"><label>Title *</label></td>
+					<td><form:input path="title" type="text" id="title" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><form:textarea path="content" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="center">
+						<button class="button">Post</button>
+						<button class="button">Cancel</button>
+					</td>
+				</tr>
+			</table>
+		</form:form>
 	</div>
 </div>
