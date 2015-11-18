@@ -22,7 +22,7 @@ import mum.ea.blog.repository.EntryRepository;
 public class EntryRepositoryImpl extends BaseRepositoryImpl<Entry> implements EntryRepository {
 
 	public List<Entry> getAll() {
-		Query query = sessionFactory.getCurrentSession().createQuery("from Entry");
+		Query query = sessionFactory.getCurrentSession().createQuery("from Entry e order by e.createdDate desc");
 		return new ArrayList<Entry>(query.list());
 	}
 
