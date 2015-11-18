@@ -30,6 +30,5 @@ public class JMSServiceImpl implements JMSService {
 				return session.createObjectMessage(contact);
 			}
 		});
-		System.out.println("Sending message with contact object : " + contact.getEmail() + " " + contact.getMessage());
 	}
 }

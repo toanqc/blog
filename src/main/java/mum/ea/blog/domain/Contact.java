@@ -17,9 +17,6 @@ public class Contact implements Serializable {
 	private static final long serialVersionUID = 3019797240613047066L;
 
 	@NotBlank(message = BlogConstant.EMPTY_VALIDATION)
-	private String name;
-
-	@NotBlank(message = BlogConstant.EMPTY_VALIDATION)
 	@Email(message = BlogConstant.EMAIL_VALIDATION)
 	private String email;
 
@@ -31,21 +28,6 @@ public class Contact implements Serializable {
 
 	public Contact() {
 		// default constructor
-	}
-
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @param name
-	 *            the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	/**

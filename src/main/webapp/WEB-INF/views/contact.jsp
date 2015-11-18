@@ -17,11 +17,6 @@
 					</tr>
 				</c:if>
 				<tr>
-					<td><spring:message code="label.contact.name" /> *</td>
-					<td><form:input path="name" id="name" type="text"
-							maxlength="100" /></td>
-				</tr>
-				<tr>
 					<td><spring:message code="label.contact.email" /> *</td>
 					<td><form:input path="email" id="email" type="email"
 							maxlength="200" /></td>
