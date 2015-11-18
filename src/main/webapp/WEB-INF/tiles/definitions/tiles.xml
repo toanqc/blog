@@ -25,6 +25,9 @@
 	<definition name="detail" extends="base">
 		<put-attribute name="body" value="/WEB-INF/views/detail.jsp" />
 	</definition>
+	<definition name="contact" extends="base">
+		<put-attribute name="body" value="/WEB-INF/views/contact.jsp" />
+	</definition>
 
 	<!-- Login -->
 	<definition name="login" extends="base">

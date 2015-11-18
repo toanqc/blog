@@ -17,4 +17,7 @@ public class BlogConstant {
 	 * <code>RANGE_LETTERS_VALIDATION="{range.letters.validation}"</code>
 	 */
 	public static final String RANGE_LETTERS_VALIDATION = "{range.letters.validation}";
+
+	/** Constant <code>EMAIL_VALIDATION="{email.validation}"</code> */
+	public static final String EMAIL_VALIDATION = "{email.validation}";
 }
