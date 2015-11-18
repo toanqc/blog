@@ -47,7 +47,7 @@
 
 	<div class="facebook">
 		<div>
-			<img src="/assets/img/facebook.png">
+			<img src="<spring:url value="/assets/img/facebook.png" />">
 		</div>
 		<div class="facebook-text">
 			<a target="_blank" href="http://www.facebook.com/toanqc">@toanqc</a>

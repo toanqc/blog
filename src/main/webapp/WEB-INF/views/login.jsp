@@ -1,7 +1,8 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="login-container">
-	<div class="title">Login</div>
+	<div class="title"><spring:message
+								code="label.login" /></div>
 	<div>
 		<form method="post"
 			action="<spring:url value="/j_spring_security_check" />">
@@ -14,7 +15,7 @@
 				</c:if>
 				<tr>
 					<td width="100px"><label for="username"><spring:message
-								code="label.login.username" /></label></td>
+								code="label.login.username" /> *</label></td>
 					<td><input type="text" id="username" name="username"></td>
 				</tr>
 				<tr>
