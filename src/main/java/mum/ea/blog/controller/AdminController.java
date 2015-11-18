@@ -47,7 +47,13 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "/entries/{id}", method = RequestMethod.POST)
-	public String patchEntry(@Valid @ModelAttribute Entry entry, BindingResult bindingResult, @PathVariable long id) {
+	public String patchEntry(@Valid @ModelAttribute Entry entry, BindingResult bindingResult, @PathVariable long id,
+			Model model) {
+		if (bindingResult.hasErrors()) {
+			model.addAttribute("isUpdate", true);
+			return "entry";
+		}
+
 		entryService.patchEntry(id, entry.getTitle(), entry.getEntryDetail().getContent());
 		return "redirect:/admin/entries";
 	}
@@ -59,8 +65,10 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "/entries", method = RequestMethod.POST)
-	public String addEntry(@Valid @ModelAttribute Entry entry, BindingResult bindingResult, Principal principal) {
+	public String addEntry(@Valid @ModelAttribute Entry entry, BindingResult bindingResult, Principal principal,
+			Model model) {
 		if (bindingResult.hasErrors()) {
+			model.addAttribute("isUpdate", false);
 			return "entry";
 		}
 

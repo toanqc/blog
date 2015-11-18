@@ -1,8 +1,15 @@
 -- hash bcrypt
--- toanqc 
+-- toanqc / toanqc
+-- admin / admin
+-- user / user
 
 INSERT INTO User (USERNAME, `PASSWORD`, ENABLED) values ('toanqc', '$2a$10$rNQqVynthlBeGumvLLGT5.LMK7CxihzmGj0mbP/8jxdeOk/f4mGqm', TRUE);
+INSERT INTO User (USERNAME, `PASSWORD`, ENABLED) values ('admin', '$2a$08$EWvyxB5sKHyPTMmDZFU3buZ30OIUlvTr/jpniiOgiBQ270T/Lgpo.', TRUE);
+INSERT INTO User (USERNAME, `PASSWORD`, ENABLED) values ('user', '$2a$08$15l95Q4n/NpESig4HuEOzeieIpb0d.I0F5EH3w0nX8lMoI4NXOd16', TRUE);
+
 INSERT INTO Authority (USERNAME, AUTHORITY) values ('toanqc', 'ROLE_ADMIN');
+INSERT INTO Authority (USERNAME, AUTHORITY) values ('admin', 'ROLE_ADMIN');
+INSERT INTO Authority (USERNAME, AUTHORITY) values ('user', 'ROLE_USER');
 
 INSERT INTO EntryDetail (CONTENT) values ('<p>I&rsquo;m very excited to let you know that I&rsquo;m joining <a href="http://www.mum.edu">M.U.M</a>.</p><p>After ten years experience worked in my country&nbsp;I couldn&rsquo;t be more proud. Proud to have been part of something as important and proud of the work I&rsquo;ve done with shaping the future of mobile communication. It&rsquo;s truly been a fantastic time of my life &mdash; an experience rich of great people, mind-boggling challenges and once-in-a-lifetime experiences.</p><blockquote><p>Look at the past for inspiration, but focus on the future, because tomorrow is shaped by the choices we make today.</p></blockquote><p>At M.U.M I&rsquo;m going to study / work hard to make all our lives better. Remove friction from technical details in our modern daily lives, and relieve us from worrying about our &ldquo;stuff&rdquo; &mdash; from quick snapshots and hasty notes to precious memories.</p><p>This is going to be such a fun adventure.</p>');
 INSERT INTO EntryDetail (CONTENT) values ('<p>I&rsquo;m very excited to let you know that I&rsquo;m joining <a href="http://www.mum.edu">M.U.M</a>.</p><p>After ten years experience worked in my country&nbsp;I couldn&rsquo;t be more proud. Proud to have been part of something as important and proud of the work I&rsquo;ve done with shaping the future of mobile communication. It&rsquo;s truly been a fantastic time of my life &mdash; an experience rich of great people, mind-boggling challenges and once-in-a-lifetime experiences.</p><blockquote><p>Look at the past for inspiration, but focus on the future, because tomorrow is shaped by the choices we make today.</p></blockquote><p>At M.U.M I&rsquo;m going to study / work hard to make all our lives better. Remove friction from technical details in our modern daily lives, and relieve us from worrying about our &ldquo;stuff&rdquo; &mdash; from quick snapshots and hasty notes to precious memories.</p><p>This is going to be such a fun adventure.</p>');

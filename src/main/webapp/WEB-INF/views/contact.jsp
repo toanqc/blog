@@ -17,18 +17,22 @@
 					</tr>
 				</c:if>
 				<tr>
-					<td><spring:message code="label.contact.email" /> *</td>
-					<td><form:input path="email" id="email" type="email"
-							maxlength="200" /></td>
+					<td width="15%"><spring:message code="label.contact.email" />
+						*</td>
+					<td width="25%"><form:input path="email" id="email"
+							type="email" maxlength="200" /></td>
+					<td width="30%"><form:errors cssClass="error" path="email" /></td>
 				</tr>
 				<tr>
 					<td><spring:message code="label.contact.title" /> *</td>
 					<td><form:input path="title" id="title" maxlength="200" /></td>
+					<td><form:errors cssClass="error" path="title" /></td>
 				</tr>
 				<tr>
 					<td><spring:message code="label.contact.message" /> *</td>
 					<td height="115px"><form:textarea path="message" id="message"
 							cols="48" rows="50" /></td>
+					<td><form:errors cssClass="error" path="message" /></td>
 				</tr>
 				<tr>
 					<td class="center" colspan="2"><button type="submit"
@@ -39,7 +43,6 @@
 							<spring:message code="label.cancel" />
 						</button></td>
 				</tr>
-
 			</table>
 		</form:form>
 	</div>

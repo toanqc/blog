@@ -41,7 +41,7 @@
 			<spring:message code="label.entry.create.new" />
 		</c:if>
 		<c:if test="${isUpdate eq true}">
-			<spring:message code="label.entry.edit" />
+			Edit an Entry
 		</c:if>
 	</div>
 
@@ -55,12 +55,19 @@
 		<form:form modelAttribute="entry" action="${entryUrl}" method="post">
 			<table>
 				<tr>
-					<td width="50px"><label><spring:message
+					<td width="10%"><label><spring:message
 								code="label.entry.title" /> *</label></td>
-					<td><form:input path="title" type="text" id="title" /></td>
+					<td width="25%"><form:input path="title" type="text"
+							id="title" /></td>
+					<td width="30%"><form:errors cssClass="error" path="title" /></td>
 				</tr>
 				<tr>
-					<td colspan="2"><form:textarea path="entryDetail.content" id="content" /></td>
+					<td colspan="3"><form:errors cssClass="error"
+							path="entryDetail.content" /></td>
+				</tr>
+				<tr>
+					<td colspan="3"><form:textarea path="entryDetail.content"
+							id="content" /></td>
 				</tr>
 				<tr>
 					<td colspan="2" class="center"><button type="submit"

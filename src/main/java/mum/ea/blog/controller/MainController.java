@@ -1,8 +1,11 @@
 package mum.ea.blog.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,7 +16,7 @@ import mum.ea.blog.service.EntryService;
 import mum.ea.blog.service.JMSService;
 
 @Controller
-public class RootController {
+public class MainController {
 
 	@Autowired
 	private EntryService entryService;
@@ -38,7 +41,12 @@ public class RootController {
 	}
 
 	@RequestMapping(value = "/contact", method = RequestMethod.POST)
-	public String sendMessage(@ModelAttribute Contact contact, RedirectAttributes redirectAttributes) {
+	public String sendMessage(@Valid @ModelAttribute Contact contact, BindingResult bindingResult,
+			RedirectAttributes redirectAttributes) {
+		if (bindingResult.hasErrors()) {
+			return "contact";
+		}
+
 		jmsService.send(contact);
 		redirectAttributes.addFlashAttribute("isSuccess", true);
 		return "redirect:/contact";
