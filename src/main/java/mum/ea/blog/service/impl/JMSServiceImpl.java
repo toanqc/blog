@@ -4,6 +4,7 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;
 
+import org.apache.log4j.Logger;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 
@@ -16,6 +17,8 @@ import mum.ea.blog.service.JMSService;
  *
  */
 public class JMSServiceImpl implements JMSService {
+
+	private static final Logger LOGGER = Logger.getLogger(JMSServiceImpl.class);
 
 	private JmsTemplate jmsTemplate;
 
@@ -30,5 +33,7 @@ public class JMSServiceImpl implements JMSService {
 				return session.createObjectMessage(contact);
 			}
 		});
+		LOGGER.info("Message has been sent to queue with email: " + contact.getEmail() + " and message: "
+				+ contact.getMessage());
 	}
 }
