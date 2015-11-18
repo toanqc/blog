@@ -17,6 +17,12 @@ import mum.ea.blog.domain.Entry;
 import mum.ea.blog.service.EntryService;
 import mum.ea.blog.service.UserService;
 
+/**
+ * 
+ * @author Toan Quach
+ *
+ */
+
 @Controller
 @RequestMapping("/admin")
 public class AdminController {

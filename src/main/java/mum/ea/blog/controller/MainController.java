@@ -15,6 +15,12 @@ import mum.ea.blog.domain.Contact;
 import mum.ea.blog.service.EntryService;
 import mum.ea.blog.service.JMSService;
 
+/**
+ * 
+ * @author Toan Quach
+ *
+ */
+
 @Controller
 public class MainController {
 

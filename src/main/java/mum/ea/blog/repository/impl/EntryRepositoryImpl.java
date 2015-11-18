@@ -10,6 +10,12 @@ import org.springframework.transaction.annotation.Transactional;
 import mum.ea.blog.domain.Entry;
 import mum.ea.blog.repository.EntryRepository;
 
+/**
+ * 
+ * @author Toan Quach
+ *
+ */
+
 @Transactional
 @Repository
 @SuppressWarnings("unchecked")

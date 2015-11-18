@@ -13,6 +13,12 @@ import mum.ea.blog.repository.EntryRepository;
 import mum.ea.blog.service.EntryService;
 import mum.ea.blog.util.BlogUtil;
 
+/**
+ * 
+ * @author Toan Quach
+ *
+ */
+
 @Transactional
 @Service
 public class EntryServiceImpl implements EntryService {

@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import mum.ea.blog.domain.Entry;
 import mum.ea.blog.service.EntryService;
 
+/**
+ * 
+ * @author Toan Quach
+ *
+ */
+
 @Controller
 public class EntryController {
 

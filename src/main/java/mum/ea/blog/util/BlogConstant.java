@@ -1,5 +1,10 @@
 package mum.ea.blog.util;
 
+/**
+ * 
+ * @author Toan Quach
+ *
+ */
 public class BlogConstant {
 
 	private BlogConstant() {

@@ -4,6 +4,11 @@ import java.util.List;
 
 import mum.ea.blog.domain.Entry;
 
+/**
+ * 
+ * @author Toan Quach
+ *
+ */
 public interface EntryService {
 
 	/**

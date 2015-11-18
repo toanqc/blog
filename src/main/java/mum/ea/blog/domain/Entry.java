@@ -20,6 +20,12 @@ import org.hibernate.validator.constraints.NotBlank;
 
 import mum.ea.blog.util.BlogConstant;
 
+/**
+ * 
+ * @author Toan Quach
+ *
+ */
+
 @Entity
 public class Entry implements Serializable {
 

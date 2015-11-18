@@ -9,6 +9,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import mum.ea.blog.repository.BaseRepository;
 
+/**
+ * 
+ * @author Toan Quach
+ *
+ * @param <T>
+ */
+
 @Transactional
 @SuppressWarnings({ "unchecked", "rawtypes" })
 public abstract class BaseRepositoryImpl<T> implements BaseRepository<T> {

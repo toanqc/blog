@@ -1,5 +1,11 @@
 package mum.ea.blog.repository;
 
+/**
+ * 
+ * @author Toan Quach
+ *
+ * @param <T>
+ */
 public interface BaseRepository<T> {
 
 	T add(T t);

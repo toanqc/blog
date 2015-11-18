@@ -6,7 +6,7 @@ import mum.ea.blog.domain.Entry;
 
 /**
  * 
- * @author qct
+ * @author Toan Quach
  *
  */
 public interface EntryRepository extends BaseRepository<Entry> {
