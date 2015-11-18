@@ -124,6 +124,23 @@
 			<version>1.8.3</version>
 		</dependency>
 
+		<!-- JMS -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>4.0.2.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hornetq</groupId>
+			<artifactId>hornetq-jms-client</artifactId>
+			<version>2.4.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>jboss</groupId>
+			<artifactId>jnp-client</artifactId>
+			<version>4.2.2.GA</version>
+		</dependency>
+
 		<!-- Logging -->
 		<dependency>
 			<groupId>log4j</groupId>

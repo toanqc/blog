@@ -10,6 +10,12 @@
 	<div>
 		<form:form modelAttribute="contact" method="post">
 			<table>
+				<c:if test="${isSuccess eq true}">
+					<tr>
+						<td colspan="2" class="success"><spring:message
+								code="label.contact.success" /></td>
+					</tr>
+				</c:if>
 				<tr>
 					<td><spring:message code="label.contact.name" /> *</td>
 					<td><form:input path="name" id="name" type="text"

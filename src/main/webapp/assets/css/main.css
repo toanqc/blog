@@ -1,15 +1,15 @@
-	body {
-		width: 900px;
-		background: #ddd;
-		color: #222;
-		font-family: 'Roboto Slab', georgia, serif;
-		font-size: 16px;
-		margin: 0 auto;
-		font-weight: 300;
-		line-height: 1.6;
-	}
+body {
+	width: 900px;
+	background: #ddd;
+	color: #222;
+	font-family: 'Roboto Slab', georgia, serif;
+	font-size: 16px;
+	margin: 0 auto;
+	font-weight: 300;
+	line-height: 1.6;
 }
 
+}
 html {
 	overflow-y: scroll;
 }
@@ -350,6 +350,9 @@ footer {
 
 .container table td input {
 	height: 25px;
+}
+
+.container table td input, .container table td textarea {
 	font-size: 14px;
 	width: 300px;
 	padding-left: 7px;
@@ -375,7 +378,13 @@ footer {
 }
 
 .error {
-	color: red;
+	color: #a94442;
+	font-weight: 500;
+}
+
+.success {
+	color: #3c763d;
+	font-weight: 500;
 }
 
 /* ENTRY LIST PAGE */

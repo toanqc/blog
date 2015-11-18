@@ -40,10 +40,44 @@
 		</property>
 	</bean>
 
-	<!-- enable the configuration of transactional behavior based on annotations -->
+	<!-- Enable the configuration of transactional behavior based on annotations -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- JMS Queue Connection Factory -->
+	<bean id="connectionFactory" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiTemplate" ref="jndiTemplate" />
+		<property name="jndiName" value="ConnectionFactory" />
+	</bean>
+	<bean id="jndiTemplate" class="org.springframework.jndi.JndiTemplate">
+		<property name="environment">
+			<props>
+				<prop key="java.naming.factory.initial">
+					org.jnp.interfaces.NamingContextFactory
+				</prop>
+				<prop key="java.naming.provider.url">
+					localhost
+				</prop>
+				<prop key="java.naming.factory.url.pkgs">
+					org.jnp.interfaces:org.jboss.naming
+				</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="queueDestination" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiTemplate" ref="jndiTemplate" />
+		<property name="jndiName" value="queue/blogQueue" />
+	</bean>
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="defaultDestination" ref="queueDestination" />
+		<property name="receiveTimeout" value="5000" />
+	</bean>
+
+	<bean id="jmsSender" class="mum.ea.blog.service.impl.JMSServiceImpl">
+		<property name="jmsTemplate" ref="jmsTemplate" />
 	</bean>
 </beans>
