@@ -9,7 +9,6 @@ body {
 	line-height: 1.6;
 }
 
-}
 html {
 	overflow-y: scroll;
 }
@@ -399,6 +398,11 @@ footer {
 
 .sub-header .breadcrumb {
 	float: left;
+}
+
+.sub-header .breadcrumb a {
+	cursor: pointer;
+	color: #29f;
 }
 
 .sub-header .welcome {

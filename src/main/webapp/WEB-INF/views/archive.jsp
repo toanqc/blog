@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <script type="text/javascript"
-	src="<spring:url value="/assets/js/app.js" />"></script>
+	src="<spring:url value="/assets/js/archive.js" />"></script>
 
 <div class="archive-container">
 	<div class="archive-icon">
