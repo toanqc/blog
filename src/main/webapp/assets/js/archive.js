@@ -22,7 +22,7 @@ $(document).ready(function() {
 				$('#archives').html(htmlResult);
 			},
 			error : function(exception) {
-				console.log("Error when calling Restful1111")
+				console.log("Error when calling Restful");
 			}
 		});
 	}
