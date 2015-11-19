@@ -57,7 +57,7 @@
 							id="content" /></td>
 				</tr>
 				<tr>
-					<td colspan="2" class="center"><button type="submit"
+					<td colspan="3" class="center"><button type="submit"
 							class="button">
 							<spring:message code="label.post" />
 						</button>

@@ -28,9 +28,9 @@
 
 <!-- javascript library -->
 <script type="text/javascript"
-	src="<spring:url value="/assets/js/lib/jquery-2.1.4.min.js" />"></script>
+	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript"
-	src="<spring:url value="/assets/js/lib/tinymce/tinymce.min.js" />"></script>
+	src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
 
 </head>
 <body>
